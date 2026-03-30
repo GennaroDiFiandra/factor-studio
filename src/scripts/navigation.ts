@@ -12,6 +12,7 @@ class Navigation {
     this.isOpen = true;
     this.menu.classList.add('navigation__menu--open');
     this.toggler.setAttribute('aria-expanded', 'true');
+    this.toggler.setAttribute('aria-label', 'Chiudi menu');
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', this.handleEscape);
   }
@@ -20,6 +21,7 @@ class Navigation {
     this.isOpen = false;
     this.menu.classList.remove('navigation__menu--open');
     this.toggler.setAttribute('aria-expanded', 'false');
+    this.toggler.setAttribute('aria-label', 'Apri menu');
     document.body.style.overflow = '';
     document.removeEventListener('keydown', this.handleEscape);
   }
