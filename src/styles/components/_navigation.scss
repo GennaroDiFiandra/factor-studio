@@ -9,6 +9,9 @@
   &__toggler {
     width: 44px;
     height: 44px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
 
     @container header (width >= #{$l}) {
       display: none;
