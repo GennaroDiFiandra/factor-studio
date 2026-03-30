@@ -1,0 +1,24 @@
+@use '../utils/index' as *;
+
+.hire-me {
+  &__container {
+    @extend %container-narrowed;
+
+    padding-bottom: calc(var(--spacing-block) * 10);
+    border-inline: 8px solid var(--color-secondary);
+    box-shadow: var(--shadow);
+  }
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__description {
+    font-style: italic;
+  }
+
+  &__contact-form {
+    margin-top: calc(var(--spacing-block) * 3);
+  }
+}

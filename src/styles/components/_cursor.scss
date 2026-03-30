@@ -1,0 +1,12 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  background-color: var(--color-secondary);
+  border-radius: var(--circle);
+  opacity: 0.25;
+}

@@ -1,0 +1,16 @@
+@use '../utils/index' as *;
+
+.sitewide-header {
+  &__container {
+    @extend %container;
+
+    container-name: header;
+    container-type: inline-size;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
