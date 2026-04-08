@@ -12,9 +12,11 @@
   --color-success: #1a3a2a;
   --color-failure: #3a1a1a;
 
-  // Fonts
+  // Font families
   --font-display: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Nunito Sans', sans-serif;
+
+  // Font sizes
   --font-display-big: clamp(3.675rem, 2.283rem + 6.958vw, 6.65rem);
   --font-display-extra-large: clamp(2.625rem, 1.631rem + 4.97vw, 4.75rem);
   --font-display-large: clamp(2rem, 1.268rem + 3.66vw, 3.563rem);
@@ -28,6 +30,8 @@
   --font-body-regular: clamp(1rem, 0.941rem + 0.29vw, 1.125rem);
   --font-body-small: clamp(0.875rem, 0.801rem + 0.37vw, 1rem);
   --font-body-extra-small: clamp(0.75rem, 0.676rem + 0.37vw, 0.875rem);
+
+  // Font styles
   --font-bold: 700;
   --letter-spacing: 0.06em;
 

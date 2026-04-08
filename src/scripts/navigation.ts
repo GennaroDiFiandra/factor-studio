@@ -36,7 +36,11 @@ class Navigation {
     this.menu.setAttribute('id', 'navigation-menu');
 
     this.toggler.addEventListener('click', () => {
-      this.isOpen ? this.close() : this.open();
+      if (this.isOpen) {
+        this.close();
+      } else {
+        this.open();
+      }
     });
 
     const closeBtn = this.menu.querySelector(

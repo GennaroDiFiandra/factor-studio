@@ -4,6 +4,7 @@
     "stylelint-config-recess-order"
   ],
   "rules": {
+    "custom-property-pattern": null,
     "property-no-vendor-prefix": [
       true,
       {

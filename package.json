@@ -1,14 +1,16 @@
 {
   "name": "factor-studio",
-  "private": true,
-  "version": "0.0.0",
+  "author": "Gennaro Di Fiandra",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-pages": "wrangler pages dev dist --compatibility-date=2024-01-01",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "style:lint": "npx stylelint 'src/**/*.scss' --fix",
-    "pages:dev": "wrangler pages dev dist --compatibility-date=2024-01-01"
+    "lint-styles": "npx stylelint 'src/**/*.scss' --fix",
+    "lint-scripts": "npx eslint 'src/**/*.ts' 'functions/**/*.ts' --fix",
+    "format-code": "npx prettier . --write"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260329.1",
