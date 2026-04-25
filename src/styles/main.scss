@@ -1,6 +1,7 @@
 @use './utils/index' as *;
 @use './globals/reset';
 @use './globals/base';
+@use './globals/animations';
 @use './components/brand';
 @use './components/cursor';
 @use './components/form';

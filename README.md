@@ -2,8 +2,6 @@
 
 Landing page personale di Gennaro Di Fiandra, sviluppatore WordPress full-stack con 15 anni di esperienza.
 
-Presenta il metodo di lavoro **Sine Nebula**, un approccio strutturato allo sviluppo WordPress che elimina l'ambiguità attraverso pianificazione documentata, aggiornamenti costanti e documentazione completa.
-
 ## Stack tecnologico
 
 **Frontend**
@@ -31,6 +29,7 @@ Presenta il metodo di lavoro **Sine Nebula**, un approccio strutturato allo svil
 
 ```
 src/
+  assets/            # Immagini
   components/        # Componenti riutilizzabili
     icons/           # Icone SVG
   partials/          # Template HTML delle sezioni
