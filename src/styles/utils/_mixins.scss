@@ -21,9 +21,23 @@
     grid-template-columns: repeat(1, 1fr);
     gap: var(--spacing-inline);
 
+    @if $cols == 2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @if $cols == 3 {
       @container boxes (width >= #{$xl}) {
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @if $cols == 4 {
+      @container boxes (width >= #{$m}) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @container boxes (width >= #{$xxl}) {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
@@ -38,10 +52,8 @@
     }
 
     &__item {
-      display: grid;
-      grid-template-rows: subgrid;
-      grid-row: span 3;
-      padding: var(--spacing);
+      padding: var(--spacing-block) var(--spacing-inline)
+        calc(var(--spacing-block) * 2);
       background-color: var(--color-primary-black);
       border-inline: 8px solid var(--color-secondary-variant);
       border-radius: var(--radius-big);
@@ -52,6 +64,7 @@
         display: flex;
         gap: calc(var(--spacing-inline) / 2);
         align-items: center;
+        min-height: calc(var(--font-display-regular) * 1.1 * 2);
         margin: 0;
         font-size: var(--font-display-regular);
         color: var(--color-secondary-variant);

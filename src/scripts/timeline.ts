@@ -27,7 +27,7 @@ class Timeline {
 
     this.items.forEach((item) => {
       const icon = item.querySelector<HTMLElement>(
-        '.background__timeline__points__item__title__icon',
+        '.who-content__timeline__points__item__title__icon',
       );
       if (!icon) return;
 
@@ -48,9 +48,11 @@ class Timeline {
 }
 
 export function initTimeline(): void {
-  const bar = document.querySelector<HTMLElement>('.background__timeline__bar');
+  const bar = document.querySelector<HTMLElement>(
+    '.who-content__timeline__bar',
+  );
   const items = document.querySelectorAll<HTMLElement>(
-    '.background__timeline__points__item',
+    '.who-content__timeline__points__item',
   );
 
   if (!bar || !items.length) return;
