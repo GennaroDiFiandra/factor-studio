@@ -46,3 +46,10 @@ h6 {
 small {
   font-size: var(--font-body-extra-small);
 }
+
+.list-item {
+  &__check::marker {
+    color: var(--color-secondary-variant);
+    content: '☑ ';
+  }
+}

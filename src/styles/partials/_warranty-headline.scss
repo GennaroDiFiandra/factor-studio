@@ -1,6 +1,6 @@
 @use '../utils/index' as *;
 
-.promise {
+.warranty-headline {
   --color-separator: var(--color-primary);
 
   @extend %section-has-background;

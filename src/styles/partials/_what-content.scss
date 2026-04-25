@@ -1,6 +1,6 @@
 @use '../utils/index' as *;
 
-.explanation {
+.what-content {
   --color-separator: var(--color-primary-dark);
 
   @extend %section-has-separator;
@@ -14,9 +14,18 @@
     container-type: inline-size;
   }
 
-  @include boxes('explanation__points', 3);
+  @include boxes('what-content__points', 4);
 
   &__points {
     @extend %stay-on-top;
+
+    &__item {
+      &__description {
+        &--list {
+          padding-left: var(--spacing-inline);
+          margin-top: 1em;
+        }
+      }
+    }
   }
 }

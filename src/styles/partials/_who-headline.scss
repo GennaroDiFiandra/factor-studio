@@ -1,0 +1,28 @@
+@use '../utils/index' as *;
+
+.who-headline {
+  --color-separator: var(--color-primary);
+
+  @extend %section-has-background;
+  @extend %section-has-separator;
+
+  background-color: var(--color-primary-dark);
+
+  &::before {
+    @extend %background-squares;
+  }
+
+  &__container {
+    @extend %container;
+
+    padding-block: calc(var(--spacing-block) * 2) calc(var(--spacing-block) * 4);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+  }
+}

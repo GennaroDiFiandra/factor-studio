@@ -38,16 +38,22 @@
     font-size: var(--font-display-large);
     text-align: center;
 
-    &__line:nth-child(3) {
-      font-size: var(--font-display-big);
+    &__line:nth-child(1) {
       color: var(--color-secondary-variant-white);
     }
   }
 
   &__subtitle {
+    width: fit-content;
     max-width: 65ch;
-    margin: 0 auto;
+    margin: var(--spacing-block) auto calc(var(--spacing-block) * 3);
+    font-size: var(--font-body-large);
+    font-weight: var(--font-bold);
+    line-height: 1;
+    color: var(--color-secondary-variant-white);
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
   }
 
   &__cta {

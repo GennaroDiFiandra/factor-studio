@@ -1,6 +1,6 @@
 @use '../utils/index' as *;
 
-.explanation {
+.warranty-content {
   --color-separator: var(--color-primary-dark);
 
   @extend %section-has-separator;
@@ -14,7 +14,7 @@
     container-type: inline-size;
   }
 
-  @include boxes('explanation__points', 3);
+  @include boxes('warranty-content__points', 2);
 
   &__points {
     @extend %stay-on-top;

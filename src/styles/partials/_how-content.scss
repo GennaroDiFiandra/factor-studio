@@ -1,6 +1,6 @@
 @use '../utils/index' as *;
 
-.method {
+.how-content {
   --color-separator: var(--color-primary-dark);
 
   @extend %section-has-separator;
@@ -14,9 +14,18 @@
     container-type: inline-size;
   }
 
-  @include boxes('method__points', 6);
+  @include boxes('how-content__points', 4);
 
   &__points {
     @extend %stay-on-top;
+
+    &__item {
+      &__description {
+        &--list {
+          padding-left: var(--spacing-inline);
+          margin-top: 1em;
+        }
+      }
+    }
   }
 }
