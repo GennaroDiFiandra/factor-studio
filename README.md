@@ -1,6 +1,6 @@
 # Factor Studio
 
-Landing page personale di Gennaro Di Fiandra, sviluppatore WordPress full-stack con 15 anni di esperienza.
+Landing page di Gennaro Di Fiandra, sviluppatore web full-stack con 16 anni di esperienza.
 
 ## Stack tecnologico
 
@@ -31,14 +31,13 @@ Landing page personale di Gennaro Di Fiandra, sviluppatore WordPress full-stack 
 src/
   assets/            # Immagini
   components/        # Componenti riutilizzabili
-    icons/           # Icone SVG
-  partials/          # Template HTML delle sezioni
+  sections/          # Template delle sezioni
   scripts/           # File TypeScript
   styles/            # File SCSS
     globals/         # Stili globali
     utils/           # Variabili, mixin e placeholder
     components/      # Stili dei componenti
-    partials/        # Stili delle sezioni
+    sections/        # Stili delle sezioni
   types/             # Dichiarazioni di tipo TypeScript
 functions/
   api/               # Cloudflare Pages Functions
