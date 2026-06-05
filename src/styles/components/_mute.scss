@@ -1,9 +1,0 @@
-@use '../utils/index' as *;
-
-.mute {
-  @extend %section-has-separator;
-
-  &__container {
-    @extend %container;
-  }
-}

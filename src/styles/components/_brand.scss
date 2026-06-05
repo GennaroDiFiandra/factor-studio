@@ -1,5 +1,13 @@
+@use '../utils/index' as *;
+
 .brand {
   margin: 0;
+  font-family: var(--font-display);
   font-size: var(--font-display-small);
-  color: var(--color-secondary-white);
+  font-weight: var(--font-bold);
+  color: var(--color-grey-white);
+
+  &--highlight {
+    color: var(--color-secondary);
+  }
 }

@@ -1,18 +1,12 @@
 import './styles/main.scss';
-import { initOffcanvas } from './scripts/offcanvas';
-import { initCursor } from './scripts/cursor';
 import { initNavigation } from './scripts/navigation';
-import { initAnimatedBox } from './scripts/animated-box';
-import { initTimeline } from './scripts/timeline';
 import { initForm } from './scripts/form';
 import { initEmailBuilder } from './scripts/email-builder';
+import { initOffcanvas } from './scripts/offcanvas';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initOffcanvas();
-  initCursor();
   initNavigation();
-  initAnimatedBox();
-  initTimeline();
   initForm();
   initEmailBuilder();
+  initOffcanvas('privacy-policy');
 });

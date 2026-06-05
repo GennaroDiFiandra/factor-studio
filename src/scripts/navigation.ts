@@ -43,9 +43,7 @@ class Navigation {
       }
     });
 
-    const closeBtn = this.menu.querySelector(
-      '.navigation__menu__close__button',
-    );
+    const closeBtn = this.menu.querySelector('.navigation__close__button');
     closeBtn?.addEventListener('click', () => this.close());
 
     this.menu.querySelectorAll('a').forEach((link) => {
@@ -55,7 +53,9 @@ class Navigation {
 }
 
 export function initNavigation(): void {
-  const toggler = document.querySelector<HTMLElement>('.navigation__toggler');
+  const toggler = document.querySelector<HTMLElement>(
+    '.navigation__toggler__button',
+  );
   const menu = document.querySelector<HTMLElement>('.navigation__menu');
 
   if (!toggler || !menu) return;

@@ -2,82 +2,45 @@
 
 .offcanvas {
   position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 99;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  max-width: $m;
-  height: 100dvh;
-  padding: var(--spacing);
-  padding-bottom: calc(var(--spacing-block) * 8);
-  overflow-y: auto;
-  background-color: var(--color-secondary-white);
-  transform: translateX(100%);
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  background-color: var(--color-grey-black-60);
+  opacity: 0;
   transition: var(--transition);
-  transition-property: transform;
+  transition-property: opacity;
 
-  &[aria-hidden='false'] {
+  &--open {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  > * {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: $m;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: var(--transition);
+    transition-property: transform;
+  }
+
+  &--open > * {
     transform: translateX(0);
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__title {
-    margin-top: 0;
-    color: var(--color-primary);
-
-    &__placeholder {
-      @extend %screen-reader-only;
-    }
   }
 
   &__close {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
-    color: var(--color-primary-black);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-left: auto;
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border: none;
-
-    &:focus-visible {
-      outline: 3px solid currentColor;
-      outline-offset: 3px;
-    }
-  }
-
-  &__body {
-    flex: 1;
-    color: var(--color-primary-black);
-  }
-
-  &__content {
-    h3 {
-      color: var(--color-primary);
-    }
-  }
-
-  &__overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 98;
-    pointer-events: none;
-    background-color: rgb(0 0 0 / 50%);
-    opacity: 0;
-    transition: var(--transition);
-    transition-property: opacity;
-
-    &[aria-hidden='false'] {
-      pointer-events: auto;
-      opacity: 1;
-    }
   }
 }

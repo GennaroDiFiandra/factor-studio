@@ -1,0 +1,18 @@
+@use '../utils/index' as *;
+
+.main-header {
+  background-image: url('../../assets/noisy-texture.png');
+
+  &__container {
+    @extend %container;
+
+    container-name: header;
+    container-type: inline-size;
+  }
+
+  &__wrapper {
+    @extend %wrapper;
+
+    justify-content: space-between;
+  }
+}

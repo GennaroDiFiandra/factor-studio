@@ -1,20 +1,40 @@
 @use '../utils/index' as *;
 
 .navigation {
-  --color-icon: var(--color-secondary-white);
+  --color-vector: var(--color-secondary);
 
   display: flex;
   align-items: center;
 
   &__toggler {
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
+    &__button {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+
+      @container header (width >= #{$l}) {
+        display: none;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: var(--spacing-block);
+    right: var(--spacing-inline);
 
     @container header (width >= #{$l}) {
       display: none;
+    }
+
+    &__button {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
     }
   }
 
@@ -31,6 +51,7 @@
     justify-content: center;
     pointer-events: none;
     background-color: var(--color-primary);
+    background-image: url('../../assets/noisy-texture.png');
     opacity: 0;
     transition: var(--transition);
     transition-property: opacity;
@@ -45,6 +66,7 @@
       flex-direction: row;
       pointer-events: auto;
       background-color: transparent;
+      background-image: none;
       opacity: 1;
     }
 
@@ -53,31 +75,21 @@
         display: block;
         padding: calc(var(--spacing-block) / 1.75)
           calc(var(--spacing-inline) / 1.75);
-        font-size: var(--font-body-big);
-        color: var(--color-secondary-white);
+        font-size: var(--font-body-extra-large);
+        color: var(--color-grey-white);
         text-decoration: none;
+        transition: var(--transition);
+        transition-property: color;
+
+        &:hover,
+        &:active,
+        &:focus-visible {
+          color: var(--color-secondary);
+        }
 
         @container header (width >= #{$l}) {
           font-size: var(--font-body-regular);
         }
-      }
-    }
-
-    &__close {
-      position: absolute;
-      top: var(--spacing-block);
-      right: var(--spacing-inline);
-
-      @container header (width >= #{$l}) {
-        display: none;
-      }
-
-      &__button {
-        width: 44px;
-        height: 44px;
-        padding: 0;
-        background-color: transparent;
-        border: none;
       }
     }
   }

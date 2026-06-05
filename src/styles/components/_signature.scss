@@ -1,9 +1,10 @@
 .signature {
   display: flex;
   gap: var(--spacing-inline);
+  align-items: center;
+  margin-block: calc(var(--spacing-block) * 4);
 
   &__photo {
-    background-color: var(--color-secondary-white);
-    border: 8px solid var(--color-secondary-variant);
+    height: 64px;
   }
 }

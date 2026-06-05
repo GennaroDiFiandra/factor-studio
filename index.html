@@ -4,50 +4,49 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Factor Studio ‧ Sviluppo Web Professionale</title>
+    <title>Factor Studio ‧ Sviluppo Strumenti Digitali Professionali</title>
     <meta
       name="description"
-      content="Sviluppo siti web e web app che servono davvero, senza frustrazioni e con garanzia soddisfatto o rimborsato."
+      content="Sviluppo siti web, web app e materiali di marketing  che servono davvero, senza frustrazioni e con garanzia soddisfatto o rimborsato."
     />
   </head>
   <body>
-    <!-- prettier-ignore -->
-    {{> header}}
+    <div id="page">
+      <!-- prettier-ignore -->
+      {{> header}}
 
-    <main>
-      <!-- prettier-ignore -->
-      {{> intro}}
-      <!-- prettier-ignore -->
-      {{> explanation}}
-      <!-- prettier-ignore -->
-      {{> what-headline }}
-      <!-- prettier-ignore -->
-      {{> what-content }}
-      <!-- prettier-ignore -->
-      {{> how-headline }}
-      <!-- prettier-ignore -->
-      {{> how-content}}
-      <!-- prettier-ignore -->
-      {{> warranty-headline }}
-      <!-- prettier-ignore -->
-      {{> warranty-content}}
-      <!-- prettier-ignore -->
-      {{> who-headline }}
-      <!-- prettier-ignore -->
-      {{> who-content}}
-      <!-- prettier-ignore -->
-      {{> mute type="wings-down" s="var(--color-primary)" bg="var(--color-secondary)"}}
-      <!-- prettier-ignore -->
-      {{> hire-me}}
-    </main>
+      <main>
+        <!-- prettier-ignore -->
+        {{> promise}}
 
-    <!-- prettier-ignore -->
-    {{> footer}}
+        <!-- prettier-ignore -->
+        {{> explanation}}
 
-    <!-- prettier-ignore -->
-    {{> offcanvas}}
-    <!-- prettier-ignore -->
-    {{> cursor}}
+        <!-- prettier-ignore -->
+        {{> what}}
+
+        <!-- prettier-ignore -->
+        {{> products}}
+
+        <!-- prettier-ignore -->
+        {{> how}}
+
+        <!-- prettier-ignore -->
+        {{> who}}
+
+        <!-- prettier-ignore -->
+        {{> warranty}}
+
+        <!-- prettier-ignore -->
+        {{> hire}}
+      </main>
+
+      <!-- prettier-ignore -->
+      {{> footer}}
+
+      <!-- prettier-ignore -->
+      {{> privacy-policy}}
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

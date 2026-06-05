@@ -1,95 +1,56 @@
 @use './variables' as *;
-@use './placeholders' as *;
 
-@mixin up($bp) {
-  @media (width >= $bp) {
-    @content;
-  }
-}
+@mixin boxes($sectionName, $columnsNumber: 3) {
+  .#{$sectionName} {
+    &__points {
+      @extend %list-reset;
 
-@mixin down($bp) {
-  @media (width < $bp) {
-    @content;
-  }
-}
+      display: grid;
+      gap: var(--spacing-inline);
 
-@mixin boxes($name, $cols: 3) {
-  .#{$name} {
-    @extend %list-reset;
-
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--spacing-inline);
-
-    @if $cols == 2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @if $cols == 3 {
-      @container boxes (width >= #{$xl}) {
-        grid-template-columns: repeat(3, 1fr);
+      @if $columnsNumber == 1 {
+        grid-template-columns: repeat(1, 1fr);
       }
-    }
 
-    @if $cols == 4 {
-      @container boxes (width >= #{$m}) {
+      @if $columnsNumber == 2 {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @container boxes (width >= #{$xxl}) {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    @if $cols == 6 {
-      @container boxes (width >= #{$m}) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @container boxes (width >= #{$xl}) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    &__item {
-      padding: var(--spacing-block) var(--spacing-inline)
-        calc(var(--spacing-block) * 2);
-      background-color: var(--color-primary-black);
-      border-inline: 8px solid var(--color-secondary-variant);
-      border-radius: var(--radius-big);
-      box-shadow: var(--shadow);
-
-      &__title {
-        position: relative;
-        display: flex;
-        gap: calc(var(--spacing-inline) / 2);
-        align-items: center;
-        min-height: calc(var(--font-display-regular) * 1.1 * 2);
-        margin: 0;
-        font-size: var(--font-display-regular);
-        color: var(--color-secondary-variant);
-
-        &::before {
-          position: absolute;
-          left: calc(var(--spacing-inline) * -1);
-          width: calc(var(--spacing-inline) / 2);
-          height: calc(var(--spacing-block) / 2);
-          content: '';
-          background-color: var(--color-secondary-variant);
-        }
-
-        & > :nth-child(1) {
-          font-size: var(--font-display-large);
+      @if $columnsNumber == 3 {
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$l}) {
+          grid-template-columns: repeat(3, 1fr);
         }
       }
 
-      &__description {
-        &--negative {
-          padding-inline: calc(var(--spacing-inline) / 2);
-          color: var(--color-primary-black);
-          background-color: var(--color-secondary-variant);
-          border-radius: var(--circle);
+      @if $columnsNumber == 4 {
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$m}) {
+          grid-template-columns: repeat(2, 1fr);
         }
+
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$xxl}) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @if $columnsNumber == 6 {
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$m}) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$l}) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      &__item {
+        padding-block: calc(var(--spacing-block) * 2)
+          calc(var(--spacing-block) * 4);
+        padding-inline: var(--spacing-inline);
       }
     }
   }

@@ -3,53 +3,46 @@
 body {
   font-family: var(--font-body);
   font-size: var(--font-body-regular);
-  color: var(--color-secondary-white);
+  color: var(--color-white);
   background-color: var(--color-primary);
 }
 
 h1 {
   font-family: var(--font-display);
   font-size: var(--font-display-extra-large);
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 h2 {
   font-family: var(--font-display);
   font-size: var(--font-display-large);
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 h3 {
   font-family: var(--font-display);
   font-size: var(--font-display-medium);
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 h4 {
   font-family: var(--font-display);
   font-size: var(--font-display-regular);
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 h5 {
   font-family: var(--font-display);
   font-size: var(--font-display-small);
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 h6 {
   font-family: var(--font-display);
   font-size: var(--font-display-extra-small);
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 small {
   font-size: var(--font-body-extra-small);
-}
-
-.list-item {
-  &__check::marker {
-    color: var(--color-secondary-variant);
-    content: '☑ ';
-  }
 }

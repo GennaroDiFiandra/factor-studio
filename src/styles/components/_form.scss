@@ -4,6 +4,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: calc(var(--spacing-block) * 2) calc(var(--spacing-inline) / 2);
+  max-width: $s;
+  margin-left: auto;
 
   &__field {
     display: flex;
@@ -31,8 +33,7 @@
     font-size: var(--font-body-regular);
     color: inherit;
     background: transparent;
-    border: 1px solid currentColor;
-    border-radius: var(--radius);
+    border: 1px solid var(--color-grey-white);
 
     &:focus-visible {
       outline: 3px solid currentColor;
@@ -49,6 +50,7 @@
     flex-shrink: 0;
     width: 20px;
     height: 20px;
+    margin: 0;
     accent-color: var(--color-secondary);
     cursor: pointer;
   }
@@ -67,14 +69,14 @@
   &__feedback {
     &--success {
       padding: var(--spacing);
+      color: var(--color-grey-black);
       background-color: var(--color-success);
-      border-radius: var(--circle);
     }
 
     &--error {
       padding: var(--spacing);
+      color: var(--color-white);
       background-color: var(--color-failure);
-      border-radius: var(--circle);
     }
   }
 }

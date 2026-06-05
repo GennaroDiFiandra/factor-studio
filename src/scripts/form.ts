@@ -63,18 +63,19 @@ class ContactForm {
         if (response.ok && result.success) {
           this.form.reset();
           this.showMessage(
-            'Ho ricevuto la tua richiesta. Ti ricontatto entro 24 ore.',
+            'Ho ricevuto la tua richiesta. Ti ricontatterò entro 24 ore.',
             true,
           );
         } else {
           this.showMessage(
-            result.error ?? 'Si è verificato un errore. Riprova per favore.',
+            result.error ??
+              'Si è verificato un errore. Riprova per favore. Nota: tutti i campi sono obbligatori.',
             false,
           );
         }
       } catch {
         this.showMessage(
-          'Si è verificato un errore. Riprova per favore.',
+          'Si è verificato un errore. Riprova per favore. Nota: tutti i campi sono obbligatori.',
           false,
         );
       } finally {
