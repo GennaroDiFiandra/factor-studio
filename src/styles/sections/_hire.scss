@@ -1,0 +1,42 @@
+@use '../utils/index' as *;
+
+.hire {
+  background-color: var(--color-grey-black);
+
+  &__container {
+    @extend %container;
+
+    padding-block: calc(var(--spacing-block) * 8);
+    container-name: hire;
+    container-type: inline-size;
+  }
+
+  &__wrapper {
+    @extend %wrapper;
+
+    flex-direction: column;
+    align-items: start;
+
+    @container hire (width >= #{$m}) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      & > :first-child {
+        flex: 1;
+      }
+
+      & > :last-child {
+        flex: 1;
+      }
+    }
+  }
+
+  &__headline {
+    margin-top: 0;
+    margin-bottom: calc(var(--spacing-block) * 6);
+  }
+
+  &__description {
+    max-width: 55ch;
+  }
+}

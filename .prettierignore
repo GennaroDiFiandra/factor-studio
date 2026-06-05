@@ -1,0 +1,17 @@
+# Build output
+dist/
+
+# Dependencies
+node_modules/
+
+# Wrangler
+.wrangler/
+
+# System
+.DS_Store
+
+# Lock files
+package-lock.json
+
+# Environment
+.dev.vars

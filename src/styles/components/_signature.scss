@@ -1,0 +1,10 @@
+.signature {
+  display: flex;
+  gap: var(--spacing-inline);
+  align-items: center;
+  margin-block: calc(var(--spacing-block) * 4);
+
+  &__photo {
+    height: 64px;
+  }
+}

@@ -1,0 +1,59 @@
+:root {
+  // Colors
+  --color-primary: #101ec5;
+  --color-primary-light: #3847ff;
+  --color-primary-extra-light: #3544ee;
+  --color-secondary: #cf0;
+  --color-secondary-48: #ccff007a;
+  --color-grey: #646464;
+  --color-grey-dark: #313131;
+  --color-grey-black: #252525;
+  --color-grey-black-60: #25252599;
+  --color-grey-light: #c0c0c0;
+  --color-grey-white: #eee;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-success: #cf0;
+  --color-failure: #b72818;
+
+  // Font families
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+
+  // Font sizes
+  --font-display-big: clamp(3.675rem, 2.283rem + 6.958vw, 6.65rem);
+  --font-display-extra-large: clamp(2.625rem, 1.631rem + 4.97vw, 4.75rem);
+  --font-display-large: clamp(2rem, 1.268rem + 3.66vw, 3.563rem);
+  --font-display-medium: clamp(1.5rem, 0.942rem + 2.79vw, 2.688rem);
+  --font-display-regular: clamp(1.125rem, 0.714rem + 2.06vw, 2rem);
+  --font-display-small: clamp(0.875rem, 0.581rem + 1.47vw, 1.5rem);
+  --font-display-extra-small: clamp(0.75rem, 0.574rem + 0.88vw, 1.125rem);
+  --font-body-extra-large: clamp(2rem, 1.941rem + 0.29vw, 2.125rem);
+  --font-body-large: clamp(1.25rem, 1.191rem + 0.29vw, 1.375rem);
+  --font-body-medium: clamp(1.125rem, 1.066rem + 0.29vw, 1.25rem);
+  --font-body-regular: clamp(1rem, 0.941rem + 0.29vw, 1.125rem);
+  --font-body-small: clamp(0.875rem, 0.801rem + 0.37vw, 1rem);
+  --font-body-extra-small: clamp(0.75rem, 0.676rem + 0.37vw, 0.875rem);
+
+  // Font styles
+  --font-bold: 700;
+  --letter-spacing: 0.06em;
+  --letter-spacing-negative: -0.06em;
+
+  // Utils
+  --spacing: 0.75rem 1.5rem;
+  --spacing-block: 0.75rem;
+  --spacing-inline: 1.5rem;
+  --shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
+  --radius: 0.5rem;
+  --radius-big: 2rem;
+  --circle: 624.9375rem;
+  --transition: 0.3s ease-in-out;
+}
+
+// Breakpoints
+$xxl: 1400px;
+$xl: 1200px;
+$l: 992px;
+$m: 768px;
+$s: 576px;

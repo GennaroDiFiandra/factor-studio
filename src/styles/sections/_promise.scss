@@ -1,0 +1,40 @@
+@use '../utils/index' as *;
+
+.promise {
+  position: relative;
+  overflow: hidden;
+  background-image: url('../../assets/noisy-texture.png');
+
+  &__container {
+    @extend %container;
+
+    padding-block: calc(var(--spacing-block) * 8)
+      calc(var(--spacing-block) * 12);
+    container-name: promise;
+    container-type: inline-size;
+  }
+
+  &__wrapper {
+    @extend %wrapper;
+  }
+
+  &__headline {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    font-size: var(--font-display-large);
+    text-align: center;
+
+    &__line {
+      &--highlight {
+        font-size: var(--font-display-extra-large);
+        line-height: 1;
+        color: var(--color-secondary);
+
+        @container promise (width >= #{$xl}) {
+          font-size: var(--font-display-big);
+        }
+      }
+    }
+  }
+}

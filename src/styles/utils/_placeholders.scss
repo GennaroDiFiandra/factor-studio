@@ -1,0 +1,87 @@
+@use './variables' as *;
+
+%container {
+  max-width: $xxl;
+  padding: var(--spacing);
+  margin-inline: auto;
+}
+
+%wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 44px;
+  padding: var(--spacing);
+  margin-inline: auto;
+  margin-top: calc(var(--spacing-block) * 2);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--font-bold);
+  line-height: 1;
+  color: var(--color-grey-black);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  border: none;
+  transition: var(--transition);
+  transition-property: transform;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+  }
+
+  &:active {
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+
+  &:focus-visible {
+    cursor: pointer;
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
+}
+
+%link {
+  padding: 0;
+  margin: 0;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: underline;
+  background: none;
+  border: none;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    text-decoration: none;
+    cursor: pointer;
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
+}

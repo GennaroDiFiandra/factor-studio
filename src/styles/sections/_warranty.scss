@@ -1,0 +1,77 @@
+@use '../utils/index' as *;
+
+.warranty {
+  background-color: var(--color-grey-white);
+  background-image: url('../../assets/noisy-texture.png');
+
+  &__container {
+    @extend %container;
+
+    padding-block: calc(var(--spacing-block) * 8);
+    container-name: warranty;
+    container-type: inline-size;
+  }
+
+  &__wrapper {
+    @extend %wrapper;
+
+    flex-direction: column;
+    align-items: start;
+
+    @container warranty (width >= #{$m}) {
+      display: grid;
+      grid-template-columns: minmax(50%, 864px) 1fr;
+      align-items: start;
+    }
+  }
+
+  &__headline {
+    margin-top: 0;
+    margin-bottom: calc(var(--spacing-block) * 4);
+    color: var(--color-grey-black);
+
+    @container warranty (width >= #{$m}) {
+      position: sticky;
+      top: var(--spacing-block);
+    }
+  }
+
+  &__points {
+    @extend %list-reset;
+
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      padding-block: calc(var(--spacing-block) * 2)
+        calc(var(--spacing-block) * 4);
+      padding-inline: var(--spacing-inline);
+
+      &__title {
+        --color-vector: var(--color-primary);
+
+        display: flex;
+        gap: var(--spacing-inline);
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+        margin-top: 0;
+        font-size: var(--font-display-regular);
+        color: var(--color-grey-black);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-negative);
+
+        &__line {
+          &:nth-child(2) {
+            width: 64px;
+          }
+        }
+      }
+
+      &__description {
+        max-width: 66ch;
+        color: var(--color-grey-dark);
+      }
+    }
+  }
+}

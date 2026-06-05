@@ -1,0 +1,57 @@
+@use './variables' as *;
+
+@mixin boxes($sectionName, $columnsNumber: 3) {
+  .#{$sectionName} {
+    &__points {
+      @extend %list-reset;
+
+      display: grid;
+      gap: var(--spacing-inline);
+
+      @if $columnsNumber == 1 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @if $columnsNumber == 2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @if $columnsNumber == 3 {
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$l}) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @if $columnsNumber == 4 {
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$m}) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$xxl}) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @if $columnsNumber == 6 {
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$m}) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* stylelint-disable-next-line container-name-pattern */
+        @container #{$sectionName} (width >= #{$l}) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      &__item {
+        padding-block: calc(var(--spacing-block) * 2)
+          calc(var(--spacing-block) * 4);
+        padding-inline: var(--spacing-inline);
+      }
+    }
+  }
+}

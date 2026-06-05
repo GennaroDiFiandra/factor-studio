@@ -1,0 +1,46 @@
+@use '../utils/index' as *;
+
+.offcanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  background-color: var(--color-grey-black-60);
+  opacity: 0;
+  transition: var(--transition);
+  transition-property: opacity;
+
+  &--open {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  > * {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: $m;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: var(--transition);
+    transition-property: transform;
+  }
+
+  &--open > * {
+    transform: translateX(0);
+  }
+
+  &__close {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+}

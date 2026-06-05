@@ -1,0 +1,74 @@
+<form class="contact-form" novalidate>
+  <div class="contact-form__field">
+    <label class="contact-form__label" for="name">Nome</label>
+    <input
+      class="contact-form__input"
+      type="text"
+      id="name"
+      name="name"
+      autocomplete="name"
+      required
+    />
+  </div>
+
+  <div class="contact-form__field">
+    <label class="contact-form__label" for="email">Email</label>
+    <input
+      class="contact-form__input"
+      type="email"
+      id="email"
+      name="email"
+      autocomplete="email"
+      required
+    />
+  </div>
+
+  <div class="contact-form__field">
+    <label class="contact-form__label" for="occupation">
+      Di cosa ti occupi?
+    </label>
+    <input
+      class="contact-form__input"
+      type="text"
+      id="occupation"
+      name="occupation"
+      autocomplete="off"
+      required
+    />
+  </div>
+
+  <div class="contact-form__field">
+    <label class="contact-form__label" for="message">
+      Di cosa hai bisogno?
+    </label>
+    <textarea
+      class="contact-form__textarea"
+      id="message"
+      name="message"
+      rows="5"
+      required
+    ></textarea>
+  </div>
+
+  <div class="contact-form__field contact-form__field--checkbox">
+    <input
+      class="contact-form__checkbox"
+      type="checkbox"
+      id="privacy"
+      name="privacy"
+      required
+    />
+    <label class="contact-form__label" for="privacy">
+      Ho letto e accetto la
+      <button
+        class="contact-form__link"
+        data-offcanvas="privacy-policy"
+        type="button"
+      >
+        Privacy Policy
+      </button>
+    </label>
+  </div>
+
+  <button class="contact-form__submit" type="submit">Invia</button>
+</form>
